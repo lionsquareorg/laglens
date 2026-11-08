@@ -1,1 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "io.github.lionsquareorg.twa",
+    "sha256_cert_fingerprints": ["F5:9B:C0:21:7D:C5:8C:1E:19:34:09:26:1F:C0:39:32:F3:F8:92:A4:AD:84:4E:41:DA:ED:1F:45:E3:C1:F9:5B"]
+  }
+}]
 
