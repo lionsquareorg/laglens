@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<title>LagLens — Privacy Policy</title>
+<meta name="description" content="LagLens Privacy Policy: No accounts, no ads, no analytics. Your data stays on your phone." />
+<meta name="theme-color" content="#0b0f19" />
+<link rel="icon" type="image/svg+xml" href="icon.svg" />
+<link rel="apple-touch-icon" href="icon.svg" />
+<style>
+  :root { --bg:#0b0f19; --card:rgba(21,28,44,.75); --card-border:rgba(255,255,255,.08); --accent:#06b6d4; --text:#f1f5f9; --text-heading:#fff; --muted:#94a3b8; --radius-md:14px; --font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; padding:20px 16px 40px; max-width:620px; margin:0 auto; line-height:1.6; }
+  .header { display:flex; align-items:center; gap:12px; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid var(--card-border); }
+  .logo { width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,#06b6d4,#0284c7); display:flex; align-items:center; justify-content:center; }
+  h1 { font-size:20px; color:var(--text-heading); } .subtitle { font-size:12px; color:var(--muted); }
+  .card { background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius-md); padding:18px; margin-bottom:16px; }
+  h2 { font-size:15px; color:var(--accent); margin-bottom:8px; font-weight:700; }
+  p { font-size:13px; color:var(--muted); margin-bottom:12px; } ul { margin-left:20px; font-size:13px; color:var(--muted); margin-bottom:12px; } li { margin-bottom:6px; }
+  .btn-back { display:inline-flex; align-items:center; gap:6px; padding:10px 16px; background:rgba(255,255,255,.08); border:1px solid var(--card-border); border-radius:8px; color:var(--text); text-decoration:none; font-size:13px; font-weight:600; }
+  .code-tag { font-family:var(--font-mono); background:rgba(0,0,0,.35); padding:2px 5px; border-radius:4px; font-size:12px; color:var(--text); }
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo" aria-hidden="true"><svg style="width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/></svg></div>
+    <div><h1>LagLens Privacy Policy</h1><div class="subtitle">Effective Date: November 2026 • Free Open Utility</div></div>
+  </header>
+  <main>
+    <section class="card"><h2>1. The Core Principle: Zero Tracking</h2><p>LagLens is built as an honest, private, client-side network utility. We operate under three straightforward guarantees:</p><ul><li><strong>No accounts:</strong> You never need to sign up, log in, or provide an email, phone number, or name.</li><li><strong>No ads:</strong> There are no advertising SDKs, ad networks, banners, or tracking pixels.</li><li><strong>No analytics:</strong> We do not collect behavioral tracking, telemetry, session recordings, or device fingerprints.</li></ul></section>
+    <section class="card"><h2>2. Local-Only Storage (Your Data Stays On Your Phone)</h2><p>All settings, threshold preferences, test history, outage logs, and comparison profiles are stored exclusively on your device inside your browser's local sandbox (<span class="code-tag">localStorage</span>). None of this data is ever transmitted to us or any central server.</p><p>You can clear all stored history at any time with a single tap in the app's Settings screen.</p></section>
+    <section class="card"><h2>3. How Diagnostic Network Requests Work</h2><p>When you start monitoring, LagLens sends lightweight HTTP GET requests with cache-busting tokens to the endpoints you select (Google Edge, Cloudflare Edge, or a Custom URL you configure). Like any standard web request on the internet:</p><ul><li>The target destination server receives the incoming connection and inherently sees your device's public IP address to reply.</li><li>LagLens uses <span class="code-tag">no-cors</span> mode and empty response generation endpoints (such as Google's <span class="code-tag">generate_204</span>) to measure round-trip elapsed time.</li><li>No payload, cookies, or user information are intentionally transmitted with these diagnostic probes.</li></ul></section>
+    <section class="card"><h2>4. Permissions Used</h2><ul><li><strong>Keep Screen Awake:</strong> Uses the standard Screen Wake Lock API to prevent the display from sleeping during an active latency test. It is requested on demand and released when monitoring stops.</li><li><strong>Sound &amp; Haptics:</strong> Uses the local Web Audio API and <span class="code-tag">navigator.vibrate</span> for notifications. No audio recordings or microphone access are requested.</li><li><strong>Browser Notifications:</strong> Used to notify you about connection degradation when enabled.</li></ul></section>
+    <section class="card"><h2>5. Contact Information</h2><p>For questions or support regarding LagLens, contact the developer at: <strong style="color:var(--text-heading)">[developer-email@example.com]</strong>.</p></section>
+  </main>
+  <p><a href="index.html" class="btn-back">← Back to LagLens</a></p>
+</body>
+</html>
